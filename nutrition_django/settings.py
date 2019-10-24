@@ -87,15 +87,7 @@ WSGI_APPLICATION = 'nutrition_django.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nutrition',
-        'USER': 'nutritionuser',
-        'PASSWORD': 'nutrition',
-        'HOST': 'localhost'
-    }
-}
+DATABASES = {}
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
@@ -146,3 +138,4 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,'project_name/static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
+
